@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PlataformadeJogos/PlataformadeJogos.csproj" />
+  <Project Path="PlataformadeJogos.Front/PlataformadeJogos.Front.csproj" />
+</Solution>

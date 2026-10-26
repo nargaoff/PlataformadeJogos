@@ -1,0 +1,81 @@
+@PlataformadeJogos_HostAddress = http://localhost:5041
+
+### ---------- Categorias ----------
+POST {{PlataformadeJogos_HostAddress}}/api/categorias
+Content-Type: application/json
+
+{ "nome": "Ação", "descricao": "Jogos de ação e aventura" }
+
+###
+GET {{PlataformadeJogos_HostAddress}}/api/categorias
+Accept: application/json
+
+###
+PUT {{PlataformadeJogos_HostAddress}}/api/categorias/1
+Content-Type: application/json
+
+{ "nome": "Ação e Aventura", "descricao": "Atualizada" }
+
+###
+DELETE {{PlataformadeJogos_HostAddress}}/api/categorias/1
+
+### ---------- Estúdios ----------
+POST {{PlataformadeJogos_HostAddress}}/api/estudios
+Content-Type: application/json
+
+{ "nome": "Studio Alfa", "pais": "Brasil" }
+
+###
+GET {{PlataformadeJogos_HostAddress}}/api/estudios?pais=Brasil
+Accept: application/json
+
+###
+PUT {{PlataformadeJogos_HostAddress}}/api/estudios/1
+Content-Type: application/json
+
+{ "nome": "Studio Alfa Games", "pais": "Brasil" }
+
+###
+DELETE {{PlataformadeJogos_HostAddress}}/api/estudios/1
+
+### ---------- Jogos ----------
+POST {{PlataformadeJogos_HostAddress}}/api/jogos
+Content-Type: application/json
+
+{ "nome": "Space Runner", "descricao": "Corrida espacial", "preco": 49.90, "categoriaId": 1, "estudioId": 1 }
+
+###
+GET {{PlataformadeJogos_HostAddress}}/api/jogos?search=space&categoriaId=1&ordenar=preco
+Accept: application/json
+
+###
+GET {{PlataformadeJogos_HostAddress}}/api/jogos/1
+Accept: application/json
+
+###
+PUT {{PlataformadeJogos_HostAddress}}/api/jogos/1
+Content-Type: application/json
+
+{ "nome": "Space Runner 2", "descricao": "Sequência", "preco": 59.90, "categoriaId": 1, "estudioId": 1 }
+
+###
+DELETE {{PlataformadeJogos_HostAddress}}/api/jogos/1
+
+### ---------- Usuários ----------
+POST {{PlataformadeJogos_HostAddress}}/api/usuarios
+Content-Type: application/json
+
+{ "nome": "Player Um", "email": "player1@email.com", "senha": "senha123" }
+
+###
+GET {{PlataformadeJogos_HostAddress}}/api/usuarios
+Accept: application/json
+
+###
+PUT {{PlataformadeJogos_HostAddress}}/api/usuarios/1
+Content-Type: application/json
+
+{ "nome": "Player 1", "email": "novo@email.com" }
+
+###
+DELETE {{PlataformadeJogos_HostAddress}}/api/usuarios/1
